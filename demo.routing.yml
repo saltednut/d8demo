@@ -1,0 +1,6 @@
+demo_page:
+  path: '/demo'
+  defaults:
+    _content: 'Drupal\demo\Controller\DemoController::demoPage'
+  requirements:
+    _permission: 'access content'
