@@ -6,25 +6,20 @@
 
 namespace Drupal\demo2\Controller;
 
-use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
-use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Controller\ControllerBase;
 
 /**
- * Controller routines for demo routes.
+ * Controller that accepts an argument.
  */
-class DemoController implements ContainerInjectionInterface {
+class DemoController {
 
-  public static function create(ContainerInterface $container) {
-    return new static($container->get('module_handler'));
-  }
-
-  public function demoPage() {
+  public function demoPage($name) {
+    // Say "Hello, [name]!"
     $build = array(
       '#type' => 'markup',
-      '#markup' => t('Hello again, world.'),
+      '#markup' => t('Hello, @name!', array('@name' => $name)),
     );
     return $build;
   }
-
 }
 
