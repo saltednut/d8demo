@@ -1,8 +1,0 @@
-name: Demo
-description: A simple demonstration module.
-type: module
-core: 8.x
-package: Examples
-dependencies:
- - node
- - block

@@ -1,10 +1,10 @@
 <?php
 /**
  * @file
- * Contains \Drupal\demo\Controller\DemoController.
+ * Contains \Drupal\demo2\Controller\DemoController.
  */
 
-namespace Drupal\demo\Controller;
+namespace Drupal\demo2\Controller;
 
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -21,7 +21,7 @@ class DemoController implements ContainerInjectionInterface {
   public function demoPage() {
     $build = array(
       '#type' => 'markup',
-      '#markup' => t('Hello OOP.'),
+      '#markup' => t('Hello again, world.'),
     );
     return $build;
   }
