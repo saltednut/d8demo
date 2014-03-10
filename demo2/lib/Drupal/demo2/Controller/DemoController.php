@@ -22,4 +22,3 @@ class DemoController {
     return $build;
   }
 }
-

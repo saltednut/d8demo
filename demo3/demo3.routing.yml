@@ -5,3 +5,10 @@ demo3_page:
     _content: 'Drupal\demo3\Controller\DemoController::demoPage'
   requirements:
     _permission: 'access content'
+demo3_other:
+  path: '/demo3/other'
+  defaults:
+    _title: 'Hello, World Pt 3.5'
+    _content: 'Drupal\demo3\Controller\OtherController::demoPage'
+  requirements:
+    _permission: 'access content'
