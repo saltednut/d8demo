@@ -14,14 +14,23 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 class OtherController implements ContainerInjectionInterface {
 
+  /**
+   * Must be implemented although not really being used.
+   */
   public static function create(ContainerInterface $container) {
     return new static();
   }
 
+  /**
+   * Return the currently active global container.
+   */
   private function container() {
     return \Drupal::getContainer();
   }
 
+  /**
+   * Return the page, calling the container() method within.
+   */
   public function demoPage() {
     $name = $this->container()->get('current_user')->name;
     $build = array(
