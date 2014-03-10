@@ -6,20 +6,10 @@
 
 namespace Drupal\demo3\Controller;
 
-use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
-use Symfony\Component\DependencyInjection\ContainerInterface;
-
 /**
  * Controller routines for demo routes.
  */
-class OtherController implements ContainerInjectionInterface {
-
-  /**
-   * Must be implemented although not really being used.
-   */
-  public static function create(ContainerInterface $container) {
-    return new static();
-  }
+class OtherController {
 
   /**
    * Return the currently active global container.
