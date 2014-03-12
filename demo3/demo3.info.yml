@@ -1,6 +1,6 @@
 name: Demo 3 - Dependency Injection
-description: "A demo module used to explain Drupal's dependency injection container."
 type: module
+description: "A demo module used to explain Drupal's dependency injection container."
 core: 8.x
 package: D8 Demo
 dependencies:

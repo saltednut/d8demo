@@ -1,6 +1,6 @@
 name: Demo 1 - Basic Controller
-description: "A demo module used to explain a basic controller class and simpletest."
 type: module
+description: "A demo module used to explain a basic controller class and simpletest."
 core: 8.x
 package: D8 Demo
 dependencies:
