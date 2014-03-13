@@ -29,7 +29,7 @@ class OtherController {
     $name = $this->container()->get('current_user')->name;
     $build = array(
       '#type' => 'markup',
-      '#markup' => t('Yep, you\'re still @name.', array('@name' => $name)),
+      '#markup' => t('Yep, you\'re still @name. But you seem confused.', array('@name' => $name)),
     );
     return $build;
   }

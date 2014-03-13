@@ -23,7 +23,7 @@ class DemoController extends ControllerBase {
     $user = $this->currentUser();
     $build = array(
       '#type' => 'markup',
-      '#markup' => t('Hello, @name!', array('@name' => $user->name)),
+      '#markup' => t('Hello, @name... Now you\'ve got it!', array('@name' => $user->name)),
     );
     return $build;
   }

@@ -48,7 +48,7 @@ class DemoController implements ContainerInjectionInterface {
   public function demoPage() {
     $build = array(
       '#type' => 'markup',
-      '#markup' => t('Hello again, @name.', array('@name' => $this->currentUser->name)),
+      '#markup' => t('Hello, @name.', array('@name' => $this->currentUser->name)),
     );
     return $build;
   }
