@@ -1,7 +1,7 @@
-demo4_hello:
-  path: '/demo4/hello/{name}'
+demo3_page:
+  path: '/demo4/{name}'
   defaults:
-    _content: '\Drupal\demo4\Controller\DefaultController::helloAction'
-    _title: 'demo4 Title'
+    _title: 'Hello, World Pt 4'
+    _content: 'Drupal\demo4\Controller\DemoController::demoPage'
   requirements:
     _permission: 'access content'

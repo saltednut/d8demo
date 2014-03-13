@@ -1,0 +1,7 @@
+demo5_hello:
+  path: '/demo5/hello/{name}'
+  defaults:
+    _content: '\Drupal\demo5\Controller\DefaultController::helloAction'
+    _title: 'demo5 Title'
+  requirements:
+    _permission: 'access content'

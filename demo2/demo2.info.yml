@@ -1,6 +1,6 @@
-name: Demo 2 - Extending ControllerBase
+name: Demo 2 - About Dependency Injection
 type: module
-description: "A demo module used to explain controller classes that accept arguments and extend other classes."
+description: "A demo module used to explain Drupal's dependency injection container."
 core: 8.x
 package: D8 Demo
 dependencies:

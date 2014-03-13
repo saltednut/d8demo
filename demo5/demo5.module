@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Contains hooks demo4
+ */
+
+/**
+ * Implements hook_help().
+ */
+
+function demo4_help($path, $arg) {
+
+  switch ($path) {
+    case 'admin/help#demo4':
+      $output = 'Demo 4';
+      return $output;
+    break;
+  }
+}

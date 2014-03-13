@@ -1,10 +1,10 @@
 <?php
 /**
  * @file
- * Contains \Drupal\demo3\Controller\OtherController.
+ * Contains \Drupal\demo2\Controller\OtherController.
  */
 
-namespace Drupal\demo3\Controller;
+namespace Drupal\demo2\Controller;
 
 /**
  * Controller routines for demo routes.
@@ -15,11 +15,15 @@ class OtherController {
    * Return the currently active global container.
    */
   private function container() {
+    // This is not proper DI.
     return \Drupal::getContainer();
   }
 
   /**
-   * Return the page, calling the container() method within.
+   * Route callable method.
+   *
+   * @return
+   *   A string representing page content.
    */
   public function demoPage() {
     $name = $this->container()->get('current_user')->name;

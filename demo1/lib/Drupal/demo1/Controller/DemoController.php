@@ -11,6 +11,12 @@ namespace Drupal\demo1\Controller;
  */
 class DemoController {
 
+  /**
+   * Route callable method.
+   *
+   * @return
+   *   A string representing page content.
+   */
   public function demoPage() {
     $build = array(
       '#type' => 'markup',

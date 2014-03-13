@@ -6,27 +6,24 @@
 
 namespace Drupal\demo3\Controller;
 
-use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
-use Symfony\Component\DependencyInjection\ContainerInterface;
-use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Controller\ControllerBase;
 
 /**
- * Controller routines for demo routes.
+ * Controller that extends ControllerBase.
  */
-class DemoController implements ContainerInjectionInterface {
+class DemoController extends ControllerBase {
 
-  protected function __construct(AccountInterface $user) {
-    $this->user = $user;
-  }
-
-  public static function create(ContainerInterface $container) {
-    return new static($container->get('current_user'));
-  }
-
+  /**
+   * Route callable method.
+   *
+   * @return
+   *   A string representing page content.
+   */
   public function demoPage() {
+    $user = $this->currentUser();
     $build = array(
       '#type' => 'markup',
-      '#markup' => t('Hello again, @name.', array('@name' => $this->user->name)),
+      '#markup' => t('Hello, @name!', array('@name' => $user->name)),
     );
     return $build;
   }
