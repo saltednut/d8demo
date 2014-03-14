@@ -1,5 +1,5 @@
 demo4_page:
-  path: '/demo4/{name}'
+  path: '/demo4/{place}'
   defaults:
     _title: 'Hello, World Pt 4'
     _content: 'Drupal\demo4\Controller\DemoController::demoPage'

@@ -6,24 +6,27 @@
 
 namespace Drupal\demo4\Controller;
 
+use Drupal\Core\Controller\ControllerBase;
+
 /**
  * Controller that accepts an argument.
  */
-class DemoController {
+class DemoController extends ControllerBase {
 
   /**
    * Route callable method.
    *
-   * @param $name
-   *   The name to be printed.
+   * @param $place
+   *   The name of a place to be printed.
    *
    * @return
    *   A string representing page content.
    */
-  public function demoPage($name) {
+  public function demoPage($place) {
+    $user = $this->currentUser();
     $build = array(
       '#type' => 'markup',
-      '#markup' => t('Hello, @name!', array('@name' => $name)),
+      '#markup' => t('Hello, @name! Welcome to @place.', array('@name' => $user->name, '@place' => $place)),
     );
     return $build;
   }
