@@ -1,0 +1,7 @@
+name: Demo 7 - Block Example
+type: module
+description: "A demo module used to explain a basic plugin extension."
+core: 8.x
+package: D8 Demo
+dependencies:
+ - block
