@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Code for our module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function demo6_theme() {
+  return array(
+    'demo6_demo' => array(
+      'variables' => array('user' => NULL, 'place' => NULL),
+      'template' => 'demo6-demo',
+    ),
+  );
+}

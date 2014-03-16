@@ -1,0 +1,7 @@
+name: Demo 6 - Twig Templates
+type: module
+description: "A demo module used to explain Twig templating."
+core: 8.x
+package: D8 Demo
+dependencies:
+ - node
