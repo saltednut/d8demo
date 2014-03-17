@@ -20,7 +20,7 @@ class DemoSimpleTest extends WebTestBase {
 
   public static function getInfo() {
     return array(
-      'name' => 'Demo 1',
+      'name' => 'Demo Controller',
       'description' => 'Functional tests for our first Demo module',
       'group' => 'D8 Demos',
     );
