@@ -6,14 +6,10 @@ use Drupal\demo\Controller\MyController;
 
 class FinalController extends MyController {
 
-  final private function text() {
-    return t('Goodbye, cruel world!');
-  }
-  
   final public function page() {
     return array(
       '#type' => 'markup',
-      '#markup' => $this->text(),
+      '#markup' => t('Goodbye, cruel world!'),
     );
   }
 

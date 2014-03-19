@@ -12,3 +12,4 @@ demo_final_page:
     _content: 'Drupal\demo\Controller\FinalController::page'
   requirements:
     _permission: 'access content'
+    _access_user_is_anonymous: 'TRUE'

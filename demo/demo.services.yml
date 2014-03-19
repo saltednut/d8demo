@@ -1,0 +1,5 @@
+services:
+  access_check.demo.user_is_anonymous:
+    class: Drupal\demo\Access\UserIsAnonymousAccessCheck
+    tags:
+      - { name: access_check }
