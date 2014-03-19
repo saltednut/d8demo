@@ -1,0 +1,14 @@
+demo_page:
+  path: '/hello'
+  defaults:
+    _title: 'Demo'
+    _content: 'Drupal\demo\Controller\MyController::page'
+  requirements:
+    _permission: 'access content'
+demo_final_page:
+  path: '/goodbye'
+  defaults:
+    _title: 'Demo'
+    _content: 'Drupal\demo\Controller\FinalController::page'
+  requirements:
+    _permission: 'access content'

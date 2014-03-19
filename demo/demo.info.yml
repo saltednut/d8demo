@@ -1,0 +1,7 @@
+name: Demo 0 - Preview
+type: module
+description: "A demo module used to explain class inheritance."
+core: 8.x
+package: D8 Demo
+dependencies:
+ - node
