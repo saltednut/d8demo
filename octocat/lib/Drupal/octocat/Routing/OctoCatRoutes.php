@@ -14,7 +14,7 @@ class OctoCatRoutes {
     $config = \Drupal::config('octocat.settings');
     $routes = array();
     foreach ($config->get('octocats') as $type) {
-      $routes['octocat.add.' . $type] = new Route(
+      $routes['octocat.page.' . $type] = new Route(
         '/octocat/' . $type,
         array(
           '_title' => t('@type', array('@type' => ucwords($type))),
