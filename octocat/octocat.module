@@ -1,0 +1,13 @@
+<?php
+/**
+ * @file
+ * Code for our module.
+ */
+
+function octocat_get_types() {
+  return array(
+    'codercat',
+    'drupalcat',
+    'dojocat',
+  );
+}

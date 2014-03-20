@@ -1,0 +1,7 @@
+name: Octocat - Dynamic Routing Example
+type: module
+description: "A demo module used to explain dynamic routes."
+core: 8.x
+package: D8 Demo
+dependencies:
+ - node
