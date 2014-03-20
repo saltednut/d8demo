@@ -11,13 +11,14 @@ use Symfony\Component\Routing\Route;
 class OctoCatRoutes {
 
   public function routes() {
+    $config = \Drupal::config('octocat.settings');
     $routes = array();
-    foreach (octocat_get_types() as $type) {
+    foreach ($config->get('octocats') as $type) {
       $routes['octocat.add.' . $type] = new Route(
-        '/octocat/add/' . $type,
+        '/octocat/' . $type,
         array(
-          '_title' => t('Add @type', array('@type' => ucwords($type))),
-          '_content' => '\Drupal\octocat\Controller\OctoCatController::add',
+          '_title' => t('@type', array('@type' => ucwords($type))),
+          '_content' => '\Drupal\octocat\Controller\OctoCatController::page',
           'type' => $type,
         ),
         array(

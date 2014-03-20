@@ -17,14 +17,13 @@ class OctoCatController {
    * Route callable method.
    *
    * @return
-   *   A string representing page content.
+   *   A theme array for Twig template.
    */
-  public function add(Request $request, $type) {
-    $build = array(
-      '#type' => 'markup',
-      '#markup' => t('Placeholder for @type OctoCat form', array('@type' => $type)),
+  public function page(Request $request, $type) {
+    return array(
+      '#theme' => 'octocat_page',
+      '#type' => $type,
     );
-    return $build;
   }
 
 }

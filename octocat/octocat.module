@@ -4,10 +4,14 @@
  * Code for our module.
  */
 
-function octocat_get_types() {
+/**
+ * Implements hook_theme().
+ */
+function octocat_theme() {
   return array(
-    'codercat',
-    'drupalcat',
-    'dojocat',
+    'octocat_page' => array(
+      'variables' => array('type' => NULL),
+      'template' => 'octocat-page',
+    ),
   );
 }
