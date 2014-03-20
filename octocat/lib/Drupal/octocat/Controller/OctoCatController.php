@@ -6,12 +6,13 @@
 
 namespace Drupal\octocat\Controller;
 
+use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Controller for the dynamic routes.
  */
-class OctoCatController {
+class OctoCatController extends ControllerBase {
 
   /**
    * Route callable method.
