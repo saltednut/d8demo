@@ -9,11 +9,11 @@
  * Implements hook_help().
  */
 
-function demo4_help($path, $arg) {
+function demo5_help($path, $arg) {
 
   switch ($path) {
-    case 'admin/help#demo4':
-      $output = 'Demo 4';
+    case 'admin/help#demo5':
+      $output = 'Demo 5'5
       return $output;
     break;
   }
