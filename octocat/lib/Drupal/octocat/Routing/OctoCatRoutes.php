@@ -15,8 +15,6 @@ class OctoCatRoutes implements ContainerInjectionInterface {
 
   protected $configFactory;
 
-  protected $route;
-
   public function __construct(ConfigFactoryInterface $config_factory) {
     $this->configFactory = $config_factory;
   }
