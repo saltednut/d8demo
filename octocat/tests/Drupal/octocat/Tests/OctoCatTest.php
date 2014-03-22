@@ -46,7 +46,7 @@ class OctoCatTest extends UnitTestCase {
   /**
    * Test the getOctoCats method.
    */
-  public function testConfig() {
+  public function getOctoCatsTest() {
     $types = array('spectrocat', 'octobiwan');
     $config = $this->getMockBuilder('Drupal\Core\Config\Config')
       ->disableOriginalConstructor()
