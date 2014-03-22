@@ -2,19 +2,20 @@
 
 /**
  * @file
- * Contains \Drupal\octocat\Tests\Routing\OctoCatRoutesTest.
+ * Contains \Drupal\octocat\Tests\Routing\OctoCatTest.
  */
 
-namespace Drupal\octocat\Tests\Routing;
+namespace Drupal\octocat\Tests;
 
+use Drupal\octocat\Routing\OctoCatRoutes;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Tests\UnitTestCase;
-use Drupal\octocat\Routing\OctoCatRoutes;
+
 
 /**
  * Tests our dynamic routing component.
  */
-class OctoCatRoutesTest extends UnitTestCase {
+class OctoCatTest extends UnitTestCase {
 
   /**
    * The config factory.
@@ -28,8 +29,8 @@ class OctoCatRoutesTest extends UnitTestCase {
    */
   public static function getInfo() {
     return array(
-      'name' => 'Octocat Routes Test',
-      'description' => 'Unit tests for our Octocat routes',
+      'name' => 'Octocat Test',
+      'description' => 'Unit tests for our Octocat module',
       'group' => 'D8 Demos',
     );
   }
@@ -43,10 +44,10 @@ class OctoCatRoutesTest extends UnitTestCase {
   }
 
   /**
-   * Test the OctoCatRoutes::routes() method.
+   * Test the getOctoCats method.
    */
-  public function testRoutes() {
-    $types = array('one', 'two');
+  public function testConfig() {
+    $types = array('spectrocat', 'octobiwan');
     $config = $this->getMockBuilder('Drupal\Core\Config\Config')
       ->disableOriginalConstructor()
       ->getMock();
@@ -59,11 +60,10 @@ class OctoCatRoutesTest extends UnitTestCase {
       ->with('octocat.settings')
       ->will($this->returnValue($config));
 
-    $octocat_routes = new OctoCatRoutes($this->configFactory);
-    $routes = $octocat_routes->routes();
-    $this->assertCount(2, $routes);
-    $this->assertArrayHasKey('octocat.page.one', $routes);
-    $this->assertArrayHasKey('octocat.page.two', $routes);
+    $octocatRoutes = new OctoCatRoutes($this->configFactory);
+    $octocats = $octocatRoutes->getOctoCats();
+    $this->assertNotEmpty($octocats);
+    $this->assertCount(2, $octocats);
   }
 
 }

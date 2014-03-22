@@ -23,14 +23,13 @@ class OctoCatRoutes implements ContainerInjectionInterface {
     return new static($container->get('config.factory'));
   }
 
-  private function octocatSettings() {
-    return $this->configFactory->get('octocat.settings');
+  public function getOctoCats() {
+    return $this->configFactory->get('octocat.settings')->get('octocats');
   }
 
   public function routes() {
-    $config = $this->octocatSettings();
     $routes = array();
-    foreach ($config->get('octocats') as $type) {
+    foreach ($this->getOctoCats() as $type) {
       $routes['octocat.page.' . $type] = new Route(
         '/octocat/' . $type,
         array(
