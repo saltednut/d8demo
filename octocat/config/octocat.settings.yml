@@ -1,5 +1,5 @@
 octocats:
- - original
- - drupalcat
- - dojocat
- - codercat
+ original: Original
+ drupalcat: Drupalcat
+ dojocat: Dojocat
+ codercat: Codercat

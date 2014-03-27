@@ -29,11 +29,11 @@ class OctoCatRoutes implements ContainerInjectionInterface {
 
   public function routes() {
     $routes = array();
-    foreach ($this->getOctoCats() as $type) {
+    foreach ($this->getOctoCats() as $type => $name) {
       $routes['octocat.page.' . $type] = new Route(
         '/octocat/' . $type,
         array(
-          '_title' => t('@type', array('@type' => ucwords($type))),
+          '_title' => t('@type', array('@type' => $name)),
           '_content' => '\Drupal\octocat\Controller\OctoCatController::page',
           'type' => $type,
         ),

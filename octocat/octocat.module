@@ -9,9 +9,9 @@
  */
 function octocat_theme() {
   return array(
-    'octocat_page' => array(
+    'octocat_display' => array(
       'variables' => array('type' => NULL),
-      'template' => 'octocat-page',
+      'template' => 'octocat-display',
     ),
   );
 }

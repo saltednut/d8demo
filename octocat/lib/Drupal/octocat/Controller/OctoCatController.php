@@ -22,7 +22,7 @@ class OctoCatController extends ControllerBase {
    */
   public function page(Request $request, $type) {
     return array(
-      '#theme' => 'octocat_page',
+      '#theme' => 'octocat_display',
       '#type' => $type,
     );
   }

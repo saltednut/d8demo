@@ -1,5 +1,5 @@
-name: Octocat - Dynamic Routing Example
+name: Octocat
 type: module
-description: "A demo module used to explain dynamic routes."
+description: "A demo module used to various config-driven functions."
 core: 8.x
 package: D8 Demo
