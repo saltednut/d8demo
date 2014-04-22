@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains \Drupal\octocat\Tests\Routing\OctoCatTest.
+ * Contains \Drupal\octocat\Tests\OctoCatTest.
  */
 
 namespace Drupal\octocat\Tests;
@@ -46,7 +46,7 @@ class OctoCatTest extends UnitTestCase {
   /**
    * Test the getOctoCats method.
    */
-  public function getOctoCatsTest() {
+  public function testGetOctoCats() {
     $types = array('spectrocat', 'octobiwan');
     $config = $this->getMockBuilder('Drupal\Core\Config\Config')
       ->disableOriginalConstructor()
